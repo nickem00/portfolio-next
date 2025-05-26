@@ -4,6 +4,7 @@ import Header from '@/components/DevPort/header'
 import DevPortHero from '@/components/DevPort/heroSection';
 import ProjectsSection from '@/components/DevPort/projectsSection';
 import AboutSection from '@/components/DevPort/About';
+import ContactSection from '@/components/DevPort/ContactSection';
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <DevPortHero></DevPortHero>
             <ProjectsSection></ProjectsSection>
             <AboutSection></AboutSection>
+            <ContactSection></ContactSection>
         </main>
     );
 }
