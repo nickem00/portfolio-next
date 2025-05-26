@@ -29,10 +29,10 @@ export default function ThemeSwitcher() {
     return (
         <button
             onClick={toggleTheme}
-            className="absolute top-4 right-4 z-50 bg-background text-foreground border border-foreground/20 px-4 py-2 rounded shadow hover:bg-foreground hover:text-background transition-colors"
+            className="fixed top-40 right-4 z-50 bg-gray-600/20 text-foreground border border-gray-800 px-4 py-2 rounded-full shadow hover:bg-gray-700 transition-colors"
             aria-label="Toggle theme"
             >
-            {theme === "dark" ? "Dark Mode" : "Light Mode"}
+            {theme === "dark" ? "D" : "L"}
         </button>
     )
 }
