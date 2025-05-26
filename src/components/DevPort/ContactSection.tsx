@@ -2,7 +2,7 @@
 
 export default function ContactSection() {
     return (
-         <section className="flex flex-col items-center justify-center
+         <section id="contact" className="flex flex-col items-center justify-center
             h-screen w-full">
             
             <h2 className="text-5xl font-lusitana">

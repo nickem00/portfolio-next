@@ -3,7 +3,7 @@ import Image from "next/image";
 // This file contains the About section of the Dev Portfolio.
 export default function AboutSection() {
     return (
-        <section className="about-section w-full h-screen flex flex-col items-center justify-center py-16">
+        <section id="about" className="about-section w-full h-screen flex flex-col items-center justify-center py-16">
             <h2 className="font-lusitana text-4xl">About Me</h2>
             <span className="w-10 h-0.5 bg-black dark:bg-white mt-3 mb-3" />
             <p className=" max-w-3xl text-center">

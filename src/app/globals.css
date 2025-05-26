@@ -12,6 +12,11 @@
   --foreground: #ffffff;
 }
 
+/* Add smooth scrolling to the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

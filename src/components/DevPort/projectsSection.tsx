@@ -81,9 +81,9 @@ export default function ProjectsSection() {
         <section id="projects" className="w-full min-h-screen flex flex-col items-center justify-center py-16">
             <div className="max-w-7xl w-11/12 mx-auto">
                 <div className='flex justify-center sm:justify-start'>
-                    <h2 className="text-4xl font-bold uppercase tracking-wide mb-12 relative inline-block">
+                    <h2 className="text-4xl font-lusitana  tracking-wide mb-12 relative inline-block">
                         My Projects
-                        <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-black/60 dark:bg-white/60"></span>
+                        <span className="absolute -bottom-2 left-1/2 sm:left-8 transform -translate-x-1/2 w-16 h-0.5 bg-black/60 dark:bg-white/60"></span>
                     </h2>
                 </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full">

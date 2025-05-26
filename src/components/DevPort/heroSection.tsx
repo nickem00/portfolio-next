@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function DevPortHero() {
     return (
-        <section className="w-full h-screen flex flex-col items-center justify-center">
+        <section className="w-full h-screen flex flex-col items-center justify-center
+            sm:items-start">
               <Image 
                 src={'/images/mountainSaltoCropped.jpg'}
                 width={2000}
@@ -24,6 +26,25 @@ export default function DevPortHero() {
                 <span className='h-0.5 mt-4 mb-4 w-8/12 bg-white/60'></span>
 
                 <p className='text-white'>I&apos;m a swedish software developer student.</p>
+
+                <div className='buttons-div mt-4 flex gap-3'>
+                    <Link href={'#projects'} 
+                    className='text-white border border-white rounded-lg 
+                    px-4 py-2
+                    hover:bg-white hover:text-black transition-all duration-300'
+                    >
+                        Projects
+                    </Link>
+                    <Link href={'/Nicholas_Malm_CV_English.pdf'} 
+                    download={true}
+                    target='_blank'
+                    className='text-white border border-white rounded-lg 
+                    px-4 py-2
+                    hover:bg-white hover:text-black transition-all duration-300'
+                    >
+                        Download CV
+                    </Link>
+                </div>
             </div>
         </section>
     )
