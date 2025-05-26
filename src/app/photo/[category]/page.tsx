@@ -11,15 +11,10 @@ interface PageParams {
   category: string;
 }
 
-export default function CategoryPage({ params }: { params: PageParams | Promise<PageParams> }) {
-  const [filteredImages, setFilteredImages] = useState<string[]>([]);
+export default function CategoryPage({ params }: { params: PageParams }) {  const [filteredImages, setFilteredImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // In Next.js 15, params is a Promise in some cases, so we need to unwrap it
-  const resolvedParams: PageParams = params instanceof Promise 
-    ? React.use(params) 
-    : params;
-  const category = resolvedParams.category.toLowerCase();
+  const category = params.category.toLowerCase();
   
   // Redirect to 404 if category is invalid
   useEffect(() => {
