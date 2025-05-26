@@ -1,5 +1,7 @@
 "use client";
 
+import { LuSun as SunIcon } from "react-icons/lu";
+import { IoMdMoon as MoonIcon } from "react-icons/io";
 import { useEffect, useState } from "react";
 
 export default function ThemeSwitcher() {
@@ -29,10 +31,14 @@ export default function ThemeSwitcher() {
     return (
         <button
             onClick={toggleTheme}
-            className="fixed top-40 right-4 z-50 bg-gray-600/20 text-foreground border border-gray-800 px-4 py-2 rounded-full shadow hover:bg-gray-700 transition-colors"
+            className="
+            fixed flex flex-col bottom-4 right-4 z-50 w-[38px] 
+             bg-[#3c474880] text-foreground 
+            border border-gray-600 px-4 py-2 rounded-full shadow 
+            hover:bg-gray-700 transition-colors justify-center items-center"
             aria-label="Toggle theme"
             >
-            {theme === "dark" ? "D" : "L"}
+            {theme === "dark" ? <MoonIcon className="text-xl text-white" /> : <SunIcon className=" text-xl text-white dark:text-black"/>}
         </button>
     )
 }
