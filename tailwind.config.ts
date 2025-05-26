@@ -9,6 +9,11 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-geist-sans)", "sans-serif"],
+        mono: ["var(--font-geist-mono)", "monospace"],
+        lusitana: ["var(--font-lusitana)", "serif"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
