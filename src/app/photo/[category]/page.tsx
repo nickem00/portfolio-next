@@ -11,14 +11,21 @@ interface PageParams {
   category: string;
 }
 
-export default function CategoryPage({ params }: { params: PageParams }) {  const [filteredImages, setFilteredImages] = useState<string[]>([]);
+export default function CategoryPage({ params }: { params: Promise<PageParams> }) {  const [filteredImages, setFilteredImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
-
-  const category = params.category.toLowerCase();
+  const [category, setCategory] = useState<string>('');
   
-  // Redirect to 404 if category is invalid
+  // Extract category from async params
   useEffect(() => {
-    if (!categories.map(c => c.toLowerCase()).includes(category)) {
+    const getCategory = async () => {
+      const resolvedParams = await params;
+      setCategory(resolvedParams.category.toLowerCase());
+    };
+    getCategory();
+  }, [params]);
+    // Redirect to 404 if category is invalid
+  useEffect(() => {
+    if (category && !categories.map(c => c.toLowerCase()).includes(category)) {
       notFound();
     }
   }, [category]);
