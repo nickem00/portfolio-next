@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://nicholasmalm.com/sitemap.xml
+
+# Disallow crawling of API routes (if any)
+Disallow: /api/
+
+# Allow crawling of images for better SEO
+Allow: /images/
+Allow: /photography/
+
+# Common crawl delays (optional)
+Crawl-delay: 1
