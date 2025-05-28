@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Lusitana } from "next/font/google";
 import "./globals.css";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${lusitana.variable} antialiased`}
       >
         <ThemeSwitcher />
+        <Analytics />
         <SpeedInsights />
         {children}
       </body>
