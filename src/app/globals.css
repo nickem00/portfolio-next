@@ -4,11 +4,11 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0d0e0f;
 }
 
 .dark {
-  --background: #000000;
+  --background: #0d0e0f;
   --foreground: #ffffff;
 }
 
@@ -32,3 +32,40 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;  /* Chrome, Safari and Opera */
 }
+
+
+@layer utilities {
+  /* Gradients Hero Section */
+  .light-gradient {
+    background: linear-gradient(
+      to top,
+      #ffffff 0%,
+      #f0f0f080 20%,
+      #f0f0f030 30%,
+      #0d0e0f40 40%,
+      #0d0e0f40 50%,
+      #e0e0e000 100%
+    )
+  }
+
+  .dark-gradient {
+    background: linear-gradient(
+      to top,
+      #0d0e0f 0%,
+      #0d0e0f80 30%,
+      #0d0e0f30 40%,
+      #0d0e0f30 70%,
+      #00000000 100%
+    )
+  }  /* Box Shadow */
+  .card-shadow {
+    box-shadow: 0 4px 14px rgba(0,0,0,0.6);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .card-shadow:hover {
+    box-shadow: 0 4px 48px rgba(0,0,0,0.6);
+  }
+}
+
+
