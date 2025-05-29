@@ -14,7 +14,7 @@ export default function DevPortHero() {
                 className="absolute inset-0 object-cover w-full h-full -z-30 object-top brightness-75"
             />            
             
-            <div className='img-overlay absolute inset-0 -z-20 bg-gradient-to-t from-black via-black/50 to-transparent' />
+            <div className='img-overlay absolute inset-0 -z-20 light-gradient dark:dark-gradient' />
             
             <div className="hero-div flex flex-col">
 
