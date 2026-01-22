@@ -11,6 +11,15 @@ export type Project = {
 
 export const projectData: Project[] = [
     {
+        title: "Trygga Tillsammans",
+        description: "Trygga Tillsammans is an Android app built with Combitech for the course Development of Mobile Applications (DA324C) at Kristianstad University, focused on Sweden’s total defense duty. The app delivers quizzes, facts and mini‑checklists in a modern Jetpack Compose UI, using MVVM with Firebase Authentication, Firestore and DataStore to support onboarding, progress tracking and user profiles.",
+        image: "/images/icon_trygga_tillsammans_color.png",
+        github: "https://www.linkedin.com/posts/nicholas-malm_project-completed-in-collaboration-with-activity-7396602219049058304-rZNu?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEitF6gBb1xElTuCjNVofdb46zWVBs3VjjI",
+        demo: null,
+        authors: ["Nicholas Malm", "Hugo Nilsson", "Jacob Hellgren", "Pontus Havmyr", "Simon Persson", "Ian Onamu"],
+        skills: ["Kotlin", "Jetpack Compose", "Material 3", "Firebase", "Firestore", "DataStore", "MVVM"]
+    },
+    {
         title: "Portfolio",
         description: "A personal portfolio built with Next.js 15 (App Router) and TypeScript, showcasing my development projects as well as a separate photography gallery. Everything is designed and developed by me, with focus on modern web development, responsive design and great user experience. The site is hosted on Vercel and uses Tailwind CSS, React Icons and has a complete project structure with component library, categorization, and image gallery management. This project was built both to create a portfolio to showcase my work and to learn Next.js and Tailwind CSS.",
         image: "/images/PortfolioThumbnail.webp",
