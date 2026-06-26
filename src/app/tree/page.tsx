@@ -27,7 +27,7 @@ export default function TreePage() {
                     </h1>
                     <p className="
                         font-lusitana text-white">
-                        Developer Student • Photographer
+                        Software Developer • Photographer
                     </p>
                 </div>
                 

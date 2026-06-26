@@ -8,8 +8,12 @@ type Project = {
     title: string;
     description: string;
     image: string;
-    github: string;
+    github: string | null;
     demo: string | null;
+    externalUrl?: string | null;
+    externalLabel?: string;
+    downloadUrl?: string | null;
+    downloadLabel?: string;
     authors: string[];
     skills: string[];
 };
@@ -87,30 +91,54 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                     </div>
                 )}
                 
-                {/* Action buttons */}
-                <div className="flex gap-4 justify-center mt-6">
-                    <a 
-                        href={project.github} 
-                        className="bg-zinc-800 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-zinc-700 transition-colors"
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                    >
-                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                        </svg>
-                    </a>
-                    
-                    {project.demo && (
-                        <a 
-                            href={project.demo} 
-                            className="bg-zinc-800 px-4 py-2 rounded-md text-white hover:bg-zinc-700 transition-colors"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                        >
-                            View Demo
-                        </a>
-                    )}
-                </div>
+                {(project.github || project.demo || project.externalUrl || project.downloadUrl) && (
+                    <div className="flex gap-4 justify-center mt-6">
+                        {project.github && (
+                            <a 
+                                href={project.github} 
+                                className="bg-cyan-800/60 w-10 h-10 rounded-full flex items-center justify-center text-white hover:bg-cyan-700/80 transition-colors"
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                            >
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                            </a>
+                        )}
+                        
+                        {project.demo && (
+                            <a 
+                                href={project.demo} 
+                                className="bg-cyan-800/60 px-4 py-2 rounded-md text-white hover:bg-cyan-700/80 transition-colors"
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                            >
+                                View Demo
+                            </a>
+                        )}
+
+                        {project.externalUrl && (
+                            <a
+                                href={project.externalUrl}
+                                className="bg-cyan-800/60 px-4 py-2 rounded-md text-white hover:bg-cyan-700/80 transition-colors"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {project.externalLabel ?? "Read More"}
+                            </a>
+                        )}
+
+                        {project.downloadUrl && (
+                            <a
+                                href={project.downloadUrl}
+                                download
+                                className="bg-cyan-800/60 px-4 py-2 rounded-md text-white hover:bg-cyan-700/80 transition-colors"
+                            >
+                                {project.downloadLabel ?? "Download"}
+                            </a>
+                        )}
+                    </div>
+                )}
             </div>
         </div>
     );
